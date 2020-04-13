@@ -1,0 +1,73 @@
+geffen,130,69,1	script	Ragnarok#2	-1,{
+OnInit:
+OnClock0135:
+OnClock0235:
+OnClock0335:
+OnClock0435:
+OnClock0535:
+OnClock0635:
+OnClock0735:
+OnClock0835:
+OnClock0935:
+OnClock1035:
+OnClock1135:
+OnClock1235:
+OnClock1335:
+OnClock1435:
+OnClock1535:
+OnClock1635:
+OnClock1735:
+OnClock1835:
+OnClock1935:
+OnClock2035:
+OnClock2135:
+OnClock2235:
+OnClock2335:
+OnClock0035:
+	killmonster "jawaii","All"; //Elimina todos los mobs sobrantes en el mapa
+	
+	announce "Se ha iniciado una Invasion en la Ciudad de Jawaii !!!!",bc_all;
+	set $Monsters_2,32;
+	monster "jawaii",0,0,"Amon Ra",1511,1,"Ragnarok#2::OnMyMobDead"; // 1
+	monster "jawaii",0,0,"Atroce",1785,1,"Ragnarok#2::OnMyMobDead"; // 2
+	monster "jawaii",0,0,"White Lady",1630,1,"Ragnarok#2::OnMyMobDead";// 3
+	monster "jawaii",0,0,"Baphomet",1039,1,"Ragnarok#2::OnMyMobDead";// 4
+	monster "jawaii",0,0,"Dark Lord",1272,1,"Ragnarok#2::OnMyMobDead";// 5
+	monster "jawaii",0,0,"Detardeurus",1719,1,"Ragnarok#2::OnMyMobDead";// 6
+	monster "jawaii",0,0,"Doppelganger",1046,1,"Ragnarok#2::OnMyMobDead";// 7
+	monster "jawaii",0,0,"Dracula",1389,1,"Ragnarok#2::OnMyMobDead";// 8
+	monster "jawaii",0,0,"Drake",1112,1,"Ragnarok#2::OnMyMobDead";// 9
+	monster "jawaii",0,0,"Eddga",1115,1,"Ragnarok#2::OnMyMobDead";// 10
+	monster "jawaii",0,0,"Evil Snake Lord",1418,1,"Ragnarok#2::OnMyMobDead";// 11
+	monster "jawaii",0,0,"Garm",1252,1,"Ragnarok#2::OnMyMobDead";// 12
+	monster "jawaii",0,0,"Turtle General",1312,1,"Ragnarok#2::OnMyMobDead";// 13
+	monster "jawaii",0,0,"Golden Thief Bug",1086,1,"Ragnarok#2::OnMyMobDead";// 14
+	monster "jawaii",0,0,"Gopinich",1885,1,"Ragnarok#2::OnMyMobDead";// 15
+	monster "jawaii",0,0,",Incantation Samurai",1492,1,"Ragnarok#2::OnMyMobDead";// 16
+	monster "jawaii",0,0,"Stormy Knight",1251,1,"Ragnarok#2::OnMyMobDead";// 17
+	monster "jawaii",0,0,"Amon Ra",1511,1,"Ragnarok#2::OnMyMobDead";// 18
+	monster "jawaii",0,0,"Lady Tanee",1688,1,"Ragnarok#2::OnMyMobDead";// 19
+	monster "jawaii",0,0,"Lord of Death",1373,1,"Ragnarok#2::OnMyMobDead";// 20
+	monster "jawaii",0,0,"Maya",1147,1,"Ragnarok#2::OnMyMobDead";// 21
+	monster "jawaii",0,0,"Mistress",1059,1,"Ragnarok#2::OnMyMobDead";// 22
+	monster "jawaii",0,0,"Moonlight Flower",1150,1,"Ragnarok#2::OnMyMobDead";// 23
+	monster "jawaii",0,0,"Orc Hero",1087,1,"Ragnarok#2::OnMyMobDead";// 24
+	monster "jawaii",0,0,"Orc Lord",1190,1,"Ragnarok#2::OnMyMobDead";// 25
+	monster "jawaii",0,0,"Osiris",1038,1,"Ragnarok#2::OnMyMobDead";// 26
+	monster "jawaii",0,0,"Pharaoh",1157,1,"Ragnarok#2::OnMyMobDead";// 27
+	monster "jawaii",0,0,"Phreeoni",1159,1,"Ragnarok#2::OnMyMobDead";// 28
+	monster "jawaii",0,0,"RSX-0806",1623,1,"Ragnarok#2::OnMyMobDead";// 29
+	monster "jawaii",0,0,"Tao Gunka",1583,1,"Ragnarok#2::OnMyMobDead";// 30
+	monster "jawaii",0,0,"Turtle General",1312,1,"Ragnarok#2::OnMyMobDead";// 31
+	monster "jawaii",0,0,"Vesper",1685,1,"Ragnarok#2::OnMyMobDead";// 32
+	end;
+
+OnMyMobDead:
+	#RPs++;
+	$Monsters_2--;
+	if ($Monsters_2 != 0)
+	announce "Quedan "+$Monsters_2+" monstruos en Jawaii.",bc_all;
+	else
+	announce "Felicidades " + strcharinfo(0) + " que mato al ultimo invasor que quedaba",bc_all,"008800";	
+	end;
+}
